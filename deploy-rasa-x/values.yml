@@ -1,0 +1,48 @@
+debugMode: true
+nginx:
+  service:
+    # connect LoadBalancer directly to VMs' internal IP
+    # You get this value with: $ hostname -I
+    externalIPs: [PRIVATE-IP]
+rasax:
+  # initialUser is the user which is created upon the initial start of Rasa X
+  initialUser:
+    # password for the Rasa X user
+    password: "<secret>"
+  # passwordSalt Rasa X uses to salt the user passwords
+  passwordSalt: "<secret>"
+  # token Rasa X accepts as authentication token from other Rasa services
+  token: "<secret>"
+  # jwtSecret which is used to sign the jwtTokens of the users
+  jwtSecret: "<secret>"
+  # tag refers to the Rasa X image tag
+  tag: "0.33.0"
+rasa:
+  versions:
+    # rasaProduction is the container which serves the production environment
+    rasaProduction:
+      # replicaCount of the Rasa Production container
+      replicaCount: 1
+  # token Rasa accepts as authentication token from other Rasa services
+  token: "<secret>"
+  # tag refers to the Rasa image tag
+  tag: "2.0.3-full"
+app:
+  # from microk8s build-in registry
+  name: "localhost:32000/action-server"
+  tag: "0.0.1"
+  replicaCount: 2
+rabbitmq:
+  # rabbitmq settings of the subchart
+  rabbitmq:
+    # password which is used for the authentication
+    password: "<secret>"
+global:
+  # postgresql: global settings of the postgresql subchart
+  postgresql:
+    # postgresqlPassword is the password which is used when the postgresqlUsername equals "postgres"
+    postgresqlPassword: "<secret>"
+  # redis: global settings of the postgresql subchart
+  redis:
+    # password to use in case there no external secret was provided
+    password: "<secret>"
