@@ -84,15 +84,6 @@ nlu:
     - so saad
     - so sad
 
-- intent: server
-  examples: |
-    - action
-    - give action
-    - execute action
-    - do an action
-    - action now
-
-
 - intent: bot_challenge
   examples: |
     - are you a bot?

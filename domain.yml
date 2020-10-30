@@ -8,7 +8,6 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-  - server
 
 responses:
   utter_greet:
@@ -31,7 +30,7 @@ responses:
   - text: "I am a bot, powered by Rasa."
 
 actions:
-  - action_hello_world
+  - action_hi
 
 session_config:
   session_expiration_time: 60

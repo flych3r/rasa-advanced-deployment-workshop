@@ -32,6 +32,9 @@ app:
   name: "localhost:32000/action-server"
   tag: "0.0.1"
   replicaCount: 2
+  extraEnvs:
+    - name: "MY_NAME"
+      value: "Bot 3"
 rabbitmq:
   # rabbitmq settings of the subchart
   rabbitmq:
