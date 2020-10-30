@@ -1,1 +1,1 @@
-# rasa-deploy-workshop
+# Rasa Advanced Deployment Workshop
