@@ -6,4 +6,4 @@ sudo dpkg -i octant_0.15.0_Linux-64bit.deb
 
 OCTANT_LISTENER_ADDR=0.0.0.0:8002 octant --disable-open-browser &
 
-echo "Open browser at http://[VM INTERNET IP]:8002"
+echo "Open browser at http://[PUBLIC-IP]:8002"
