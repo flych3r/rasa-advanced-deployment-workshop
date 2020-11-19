@@ -1,4 +1,5 @@
 # Action server
+***__This step is necessary if you run a custom action server__***
 ```bash
 sudo docker-compose build
 sudo docker push localhost:32000/action-server:0.0.1
@@ -6,7 +7,7 @@ sudo docker push localhost:32000/action-server:0.0.1
 
 # Rasa X cluster
 ```
-kubectl create namespace my-namespace
+kubectl create namespace <my-namespace>
 helm repo add rasa-x https://rasahq.github.io/rasa-x-helm
-helm --namespace my-namespace install --values values.yml my-release rasa-x/rasa-x
+helm --namespace <my-namespace> install --values values.yml my-release rasa-x/rasa-x
 ```
